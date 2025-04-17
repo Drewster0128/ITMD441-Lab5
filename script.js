@@ -5,6 +5,7 @@ let tipField = document.getElementById("tip");
 let billWithTaxField = document.getElementById("bill_with_tax");
 let tipAmountField = document.getElementById("tip_amount");
 let fullBillField = document.getElementById("bill_tip_and_tax");
+let billInputBlock = document.getElementById("bill_input");
 
 let taxPercentage = 0.11;
 
@@ -17,11 +18,21 @@ function getBill()
 {
     if(isNaN(billField.value) || Number(billField.value) < 0)
     {
+        if(billInputBlock.classList.contains("input--error") == false)
+        {
+            billInputBlock.classList.add("input--error");
+        }
         throw new Error("Please provide a non-negative number");
     }
     else
     {
-        return Number(billField.value);
+        if(billField.classList.contains("input--error"))
+        {
+            billInputBlock.classList.remove("input--error");
+        }
+        ret = Number(billField.value);
+        billField.value = ret.toFixed(2);
+        return ret;
     }
 }
 

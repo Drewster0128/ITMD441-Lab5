@@ -1,0 +1,40 @@
+html {
+    font-size: 20px;
+    line-height: 1.2em;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+h1 {
+    width: max-content;
+    font-size: 2em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+main {
+    width: max-content;
+    background-color: lightgreen;
+    padding: 0.5em;
+}
+
+form {
+    width: max-content;
+}
+
+.input {
+    width: max-content;
+    padding: 0.5em;
+}
+
+.input--error::after {
+    content: "Please provide a non-negative number";
+    color: red;
+    display: block;
+}

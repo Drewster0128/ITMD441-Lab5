@@ -18,6 +18,12 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 0.8em;
+    line-height: 1.2em;
+    padding: 0;
+}
+
 main {
     width: max-content;
     background-color: lightgreen;
